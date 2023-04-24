@@ -1,0 +1,31 @@
+<!--
+/*
+
+
+## In the following Java example the class RegistrationForm is a Struts framework ActionForm Bean that will maintain user input data from a registration webpage for an online business site. The user will enter registration data and, through the Struts framework, the RegistrationForm bean will maintain the user data.
+*/
+public class RegistrationForm extends org.apache.struts.action.ActionForm {
+// private variables for registration form
+	private String name;
+	private String email;
+	...
+
+	public RegistrationForm() {
+		super();
+
+	}
+	// getter and setter methods for private variables
+
+	...
+
+}
+// Bad XML
+-->
+<struts-config>
+	<form-beans>
+		<form-bean name="RegistrationFormBad" type="RegistrationForm"/>
+	</form-beans>
+	...
+	<!-- ========================= Not Validator plugin ================================= -->
+	<!-- FLAW: -->
+</struts-config>

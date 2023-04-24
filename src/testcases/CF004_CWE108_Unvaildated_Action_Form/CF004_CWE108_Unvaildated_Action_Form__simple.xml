@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+<bean id="userCriteriaAction" class="org.springframework.webflow.action.FormAction">
+        <property name="formObjectClass"
+            value="com.codemind.domain.UserCriteria" />
+        <property name="propertyEditorRegistrar">
+            <bean
+                class="com.codemind.web.PropertyEditors" />
+        </property>
+    </bean>
+	</beans>

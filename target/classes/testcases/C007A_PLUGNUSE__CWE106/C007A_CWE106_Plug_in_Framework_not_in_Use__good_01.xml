@@ -1,0 +1,42 @@
+<!--
+// Good Java
+/*
+## However, the RegistrationForm class extends the Struts ActionForm class which does use the Struts validator plug-in to provide validator capabilities. In the following example, the RegistrationForm Java class extends the ValidatorForm and Struts configuration XML file, struts-config.xml, instructs the application to use the Struts validator plug-in.
+*/
+public class RegistrationForm extends org.apache.struts.validator.ValidatorForm {
+// private variables for registration form
+	private String name;
+	private String email;
+	...
+
+	public RegistrationForm() {
+		super();
+
+	}
+
+	public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {...}
+	// getter and setter methods for private variables
+
+	...
+
+}
+-->
+
+
+
+<!-- Good xml -->
+<!--
+## The plug-in tag of the Struts configuration XML file includes the name of the validator plug-in to be used and includes a set-property tag to instruct the application to use the file, validator-rules.xml, for default validation rules and the file, validation.XML, for custom validation.
+-->
+<struts-config>
+	<form-beans>
+		<form-bean name="RegistrationFormGood" type="RegistrationForm"/>
+	</form-beans>
+	...
+	<!-- ========================= Validator plugin ================================= -->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property
+			property="pathnames"
+			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+	</plug-in>
+</struts-config>

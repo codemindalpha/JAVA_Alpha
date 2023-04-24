@@ -1,0 +1,8 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ĞŒíŠûÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(èãŸ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùŸùîşÿÿÿÿ
+X
+java:S2094"BRemove this empty class, write its code or make it an "interface".(èãŸ
+C
+java:S3985"-Remove this unused private "urlHelper" class.(èãŸ

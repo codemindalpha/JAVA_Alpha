@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.apache.ibatis.submitted.rounding.Mapper">
+<!-- bad -->
+<!-- FLAW: -->
+<select id="getConfirmInfoDetail" parameterType="contract.model.ConfirmInfoVO" resultType="contract.modelConfirmInfoVO">
+<include refid="contract.contractMstInfoMapper.CONTRACT_MST_INFO" />
+  select a.confirm_seq as confirmSeq
+  , a.cust_cd as custCd
+  , (select cust_nm from cust_mst where cust_cd = a.cust_cd) as custNm
+  , a.attach_file_no as attachFileNo
+  , to_char(a.reg_dt, ‘yyyy-mm-dd’) as regDt
+  , a.reg_usr_seq as regUsrSeq
+  from confirm_info a
+  left outer join contract_mst_info b on b.contract_seq = a.contract_seq
+  where a.confirm_seq = ${confirmSeq}
+</select>
+
+<!-- good -->
+<select id="getConfirmInfoDetail" parameterType="contract.model.ConfirmInfoVO" resultType="contract.modelConfirmInfoVO">
+<include refid="contract.contractMstInfoMapper.CONTRACT_MST_INFO" />
+select a.confirm_seq as confirmSeq
+, a.cust_cd as custCd
+, (select cust_nm from cust_mst where cust_cd = a.cust_cd) as custNm
+, a.attach_file_no as attachFileNo
+, to_char(a.reg_dt, ‘yyyy-mm-dd’) as regDt
+, a.reg_usr_seq as regUsrSeq
+from confirm_info a
+left outer join contract_mst_info b on b.contract_seq = a.contract_seq
+where a.confirm_seq = #{confirmSeq}
+</select>
+</mapper>

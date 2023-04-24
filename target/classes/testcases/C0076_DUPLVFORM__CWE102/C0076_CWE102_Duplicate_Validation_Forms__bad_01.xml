@@ -1,0 +1,33 @@
+<!-- ## Two validation forms with the same name. ## It is critically important that validation logic be maintained and kept in sync with the rest of the application. -->
+
+<form-validation>
+  <formset>
+    <form name="LoginForm">
+      <field property="userName" depends="required">
+        <arg key="LoginForm.userName"/>
+      </field>
+      <field property="password" depends="required,minlength">
+        <arg0 key="LoginForm.password"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>6</var-value>
+        </var>
+      </field>
+    </form>
+  	<!-- FLAW: -->
+    <form name="LoginForm">
+      <field property="userName" depends="required">
+        <arg key="LoginForm.userName"/>
+      </field>
+      <field property="password" depends="required,minlength">
+        <arg0 key="LoginForm.password"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>6</var-value>
+        </var>
+      </field>
+    </form>
+  </formset>
+</form-validation>

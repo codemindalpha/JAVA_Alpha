@@ -1,0 +1,11 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Þõßê
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùŸùîþÿÿÿÿ
+<
+java:S3010"&Remove this assignment of "memberTwo".(´ÍÙ¿
+K
+java:S2209"5Change this instance-reference to a static reference.(´ÍÙ¿
+D
+java:S3985")Remove this unused private "Inner" class.(œùÿ¢ýÿÿÿÿ
+C
+java:S1068"-Remove this unused "memberOne" private field.(â«·°

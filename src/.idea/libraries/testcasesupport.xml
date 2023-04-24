@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="testcasesupport">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/testcasesupport/hibernate-3.2.6.ga.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/xqj-api-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/ibatis-core-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/spring-web-3.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/struts-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/log4j-core-2.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/ejb-api-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/cos-05Nov2002.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/servlet-api-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/spring-context-4.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testcasesupport/persistence-api-1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
